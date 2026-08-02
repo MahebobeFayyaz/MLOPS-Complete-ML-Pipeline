@@ -112,7 +112,8 @@ def save_metrics(metrics: dict, file_path: str) -> None:
 
 def main():
     try:
-        params = load_params(params_path='params.yaml')
+        #params = load_params(params_path='params.yaml')
+        params = {'n_estimators':25, 'random_state': 2}
         clf = load_model('./models/model.pkl')
         test_data = load_data('./data/processed/test_tfidf.csv')
         
