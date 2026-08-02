@@ -21,7 +21,7 @@ os.makedirs(LOG_DIR, exist_ok=True)
 # ==========================================================
 # Configure Logger
 # ==========================================================
-logger = logging.getLogger("feature_engineering")
+logger = logging.getLogger("model_building")
 logger.setLevel(logging.DEBUG)
 
 # Prevent duplicate logs
@@ -36,7 +36,7 @@ console_handler.setLevel(logging.DEBUG)
 # ==========================================================
 # File Handler
 # ==========================================================
-log_file = os.path.join(LOG_DIR, "feature_engineering.log")
+log_file = os.path.join(LOG_DIR, "model_building.log")
 
 file_handler = logging.FileHandler(log_file)
 file_handler.setLevel(logging.DEBUG)
@@ -142,7 +142,7 @@ def main():
 
         # Load feature vectors
         train_df = pd.read_csv(
-            os.path.join("data", "raw", "transformed", "train_vectors.csv")
+            os.path.join("data", "transformed", "train_vectors.csv")
         )
 
         logger.info("Training vectors loaded successfully.")

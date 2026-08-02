@@ -1,0 +1,41 @@
+2026-08-02 18:25:16 - model_building - INFO - Starting model building pipeline...
+2026-08-02 18:25:16 - model_building - INFO - Loading parameters from params.yaml...
+2026-08-02 18:25:16 - model_building - INFO - Parameters loaded successfully.
+2026-08-02 18:25:16 - model_building - INFO - Loaded Parameters -> n_estimators=22, random_state=2
+2026-08-02 18:25:16 - model_building - ERROR - Pipeline failed: [Errno 2] No such file or directory: 'data\\raw\\transformed\\train_vectors.csv'
+Traceback (most recent call last):
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\model_building.py", line 144, in main
+    train_df = pd.read_csv(
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\raw\\transformed\\train_vectors.csv'
+2026-08-02 18:26:30 - model_building - INFO - Starting model building pipeline...
+2026-08-02 18:26:30 - model_building - INFO - Loading parameters from params.yaml...
+2026-08-02 18:26:30 - model_building - INFO - Parameters loaded successfully.
+2026-08-02 18:26:30 - model_building - INFO - Loaded Parameters -> n_estimators=22, random_state=2
+2026-08-02 18:26:30 - model_building - INFO - Training vectors loaded successfully.
+2026-08-02 18:26:30 - model_building - INFO - Features and target separated successfully.
+2026-08-02 18:26:30 - model_building - INFO - Training Random Forest model...
+2026-08-02 18:26:30 - model_building - INFO - Random Forest model trained successfully.
+2026-08-02 18:26:30 - model_building - INFO - Saving trained model...
+2026-08-02 18:26:30 - model_building - INFO - Model saved successfully at model\randomforest_model.pkl
+2026-08-02 18:26:30 - model_building - INFO - Model building pipeline completed successfully.
+2026-08-02 18:27:32 - model_building - INFO - Starting model building pipeline...
+2026-08-02 18:27:32 - model_building - INFO - Loading parameters from params.yaml...
+2026-08-02 18:27:32 - model_building - INFO - Parameters loaded successfully.
+2026-08-02 18:27:32 - model_building - INFO - Loaded Parameters -> n_estimators=22, random_state=2
+2026-08-02 18:27:32 - model_building - INFO - Training vectors loaded successfully.
+2026-08-02 18:27:32 - model_building - INFO - Features and target separated successfully.
+2026-08-02 18:27:32 - model_building - INFO - Training Random Forest model...
+2026-08-02 18:27:32 - model_building - INFO - Random Forest model trained successfully.
+2026-08-02 18:27:32 - model_building - INFO - Saving trained model...
+2026-08-02 18:27:32 - model_building - INFO - Model saved successfully at model\randomforest_model.pkl
+2026-08-02 18:27:33 - model_building - INFO - Model building pipeline completed successfully.

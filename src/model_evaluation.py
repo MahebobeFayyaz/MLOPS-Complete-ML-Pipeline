@@ -232,7 +232,6 @@ def main():
 
         test_file_path = os.path.join(
             "data",
-            "raw",
             "transformed",
             "test_vectors.csv"
         )

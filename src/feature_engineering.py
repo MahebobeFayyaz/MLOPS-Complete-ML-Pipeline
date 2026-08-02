@@ -117,7 +117,7 @@ def save_transformed_data(X_train, X_test, train_target, test_target):
     try:
         logger.info("Saving transformed feature vectors...")
 
-        output_dir = os.path.join("data", "raw", "transformed")
+        output_dir = os.path.join("data", "transformed")
         os.makedirs(output_dir, exist_ok=True)
 
         train_path = os.path.join(output_dir, "train_vectors.csv")
