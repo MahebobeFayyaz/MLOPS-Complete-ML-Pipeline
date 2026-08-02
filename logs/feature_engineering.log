@@ -9,3 +9,37 @@
 2026-08-02 17:26:47 - feature_engineering - INFO - Train vectors saved to data\transformed\train_vectors.csv
 2026-08-02 17:26:47 - feature_engineering - INFO - Test vectors saved to data\transformed\test_vectors.csv
 2026-08-02 17:26:47 - feature_engineering - INFO - Feature engineering pipeline completed successfully.
+2026-08-02 17:50:28 - feature_engineering - INFO - Starting feature engineering pipeline...
+2026-08-02 17:50:28 - feature_engineering - INFO - Loading parameters from params.yaml...
+2026-08-02 17:50:28 - feature_engineering - INFO - Parameters loaded successfully.
+2026-08-02 17:50:28 - feature_engineering - INFO - Loaded max_features=35
+2026-08-02 17:50:28 - feature_engineering - INFO - Preprocessed datasets loaded successfully.
+2026-08-02 17:50:28 - feature_engineering - INFO - Applying TF-IDF Vectorization with max_features=35...
+2026-08-02 17:50:29 - feature_engineering - INFO - TF-IDF feature engineering completed successfully.
+2026-08-02 17:50:29 - feature_engineering - ERROR - Pipeline failed: save_transformed_data() missing 2 required positional arguments: 'train_target' and 'test_target'
+Traceback (most recent call last):
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\feature_engineering.py", line 163, in main
+    save_transformed_data(X_train, X_test)
+TypeError: save_transformed_data() missing 2 required positional arguments: 'train_target' and 'test_target'
+2026-08-02 17:51:48 - feature_engineering - INFO - Starting feature engineering pipeline...
+2026-08-02 17:51:48 - feature_engineering - INFO - Loading parameters from params.yaml...
+2026-08-02 17:51:48 - feature_engineering - INFO - Parameters loaded successfully.
+2026-08-02 17:51:48 - feature_engineering - INFO - Loaded max_features=35
+2026-08-02 17:51:48 - feature_engineering - INFO - Preprocessed datasets loaded successfully.
+2026-08-02 17:51:48 - feature_engineering - INFO - Applying TF-IDF Vectorization with max_features=35...
+2026-08-02 17:51:48 - feature_engineering - INFO - TF-IDF feature engineering completed successfully.
+2026-08-02 17:51:48 - feature_engineering - INFO - Saving transformed feature vectors...
+2026-08-02 17:51:49 - feature_engineering - INFO - Train vectors saved to data\raw\transformed\train_vectors.csv
+2026-08-02 17:51:49 - feature_engineering - INFO - Test vectors saved to data\raw\transformed\test_vectors.csv
+2026-08-02 17:51:49 - feature_engineering - INFO - Feature engineering pipeline completed successfully.
+2026-08-02 17:53:08 - feature_engineering - INFO - Starting model building pipeline...
+2026-08-02 17:53:08 - feature_engineering - INFO - Loading parameters from params.yaml...
+2026-08-02 17:53:08 - feature_engineering - INFO - Parameters loaded successfully.
+2026-08-02 17:53:08 - feature_engineering - INFO - Loaded Parameters -> n_estimators=22, random_state=2
+2026-08-02 17:53:08 - feature_engineering - INFO - Training vectors loaded successfully.
+2026-08-02 17:53:08 - feature_engineering - INFO - Features and target separated successfully.
+2026-08-02 17:53:08 - feature_engineering - INFO - Training Random Forest model...
+2026-08-02 17:53:09 - feature_engineering - INFO - Random Forest model trained successfully.
+2026-08-02 17:53:09 - feature_engineering - INFO - Saving trained model...
+2026-08-02 17:53:09 - feature_engineering - INFO - Model saved successfully at model\randomforest_model.pkl
+2026-08-02 17:53:09 - feature_engineering - INFO - Model building pipeline completed successfully.

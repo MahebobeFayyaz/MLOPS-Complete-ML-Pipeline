@@ -112,25 +112,25 @@ def feature_engineering(train_df, test_df, max_features):
         logger.exception(f"Error during feature engineering: {e}")
         raise    
     
-def save_transformed_data(X_train, X_test):
-    """
-    Save transformed feature vectors.
-    """
-
+def save_transformed_data(X_train, X_test, train_target, test_target):
+    
     try:
         logger.info("Saving transformed feature vectors...")
 
-        output_dir = os.path.join("data", "transformed")
+        output_dir = os.path.join("data", "raw", "transformed")
         os.makedirs(output_dir, exist_ok=True)
 
         train_path = os.path.join(output_dir, "train_vectors.csv")
         test_path = os.path.join(output_dir, "test_vectors.csv")
 
-        train_df = pd.DataFrame(X_train)
-        test_df = pd.DataFrame(X_test)
+        train_vectors = pd.DataFrame(X_train)
+        train_vectors["target"] = train_target.values
 
-        train_df.to_csv(train_path, index=False)
-        test_df.to_csv(test_path, index=False)
+        test_vectors = pd.DataFrame(X_test)
+        test_vectors["target"] = test_target.values
+
+        train_vectors.to_csv(train_path, index=False)
+        test_vectors.to_csv(test_path, index=False)
 
         logger.info(f"Train vectors saved to {train_path}")
         logger.info(f"Test vectors saved to {test_path}")
@@ -138,8 +138,7 @@ def save_transformed_data(X_train, X_test):
     except Exception as e:
         logger.exception(f"Error while saving transformed data: {e}")
         raise
-
-
+    
 def main():
     
     try:
@@ -161,7 +160,12 @@ def main():
             max_features,
         )
 
-        save_transformed_data(X_train, X_test)
+        save_transformed_data(
+                             X_train,
+                             X_test,
+                             train_df["target"],
+                             test_df["target"]
+                            )
 
         logger.info("Feature engineering pipeline completed successfully.")
 
