@@ -12,3 +12,123 @@
 2026-08-02 16:55:01 - data_preprocessing - INFO - Train data saved to data\Interim\train_preprocessed.csv
 2026-08-02 16:55:01 - data_preprocessing - INFO - Test data saved to data\Interim\test_preprocessed.csv
 2026-08-02 16:55:01 - data_preprocessing - INFO - Data preprocessing pipeline completed successfully.
+2026-08-02 17:10:50 - data_preprocessing - INFO - Starting feature engineering pipeline...
+2026-08-02 17:10:50 - data_preprocessing - INFO - Loading parameters from params.yaml...
+2026-08-02 17:10:50 - data_preprocessing - INFO - Parameters loaded successfully.
+2026-08-02 17:10:50 - data_preprocessing - INFO - Loaded max_features=35
+2026-08-02 17:10:50 - data_preprocessing - INFO - Preprocessed datasets loaded successfully.
+2026-08-02 17:10:50 - data_preprocessing - INFO - Applying TF-IDF Vectorization with max_features=35...
+2026-08-02 17:10:50 - data_preprocessing - ERROR - Error during feature engineering: np.nan is an invalid document, expected byte or unicode string.
+Traceback (most recent call last):
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\feature_engineering.py", line 102, in feature_engineering
+    X_train = tfidf.fit_transform(train_df["transformed_text"]).toarray()
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 2105, in fit_transform
+    X = super().fit_transform(raw_documents)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1377, in fit_transform
+    vocabulary, X = self._count_vocab(raw_documents, self.fixed_vocabulary_)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1264, in _count_vocab
+    for feature in analyze(doc):
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 99, in _analyze
+    doc = decoder(doc)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 232, in decode
+    raise ValueError(
+ValueError: np.nan is an invalid document, expected byte or unicode string.
+2026-08-02 17:10:50 - data_preprocessing - ERROR - Pipeline failed: np.nan is an invalid document, expected byte or unicode string.
+Traceback (most recent call last):
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\feature_engineering.py", line 156, in main
+    X_train, X_test, tfidf = feature_engineering(
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\feature_engineering.py", line 102, in feature_engineering
+    X_train = tfidf.fit_transform(train_df["transformed_text"]).toarray()
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 2105, in fit_transform
+    X = super().fit_transform(raw_documents)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1377, in fit_transform
+    vocabulary, X = self._count_vocab(raw_documents, self.fixed_vocabulary_)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1264, in _count_vocab
+    for feature in analyze(doc):
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 99, in _analyze
+    doc = decoder(doc)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 232, in decode
+    raise ValueError(
+ValueError: np.nan is an invalid document, expected byte or unicode string.
+2026-08-02 17:17:58 - data_preprocessing - INFO - Starting feature engineering pipeline...
+2026-08-02 17:17:58 - data_preprocessing - INFO - Loading parameters from params.yaml...
+2026-08-02 17:17:58 - data_preprocessing - INFO - Parameters loaded successfully.
+2026-08-02 17:17:58 - data_preprocessing - INFO - Loaded max_features=35
+2026-08-02 17:17:58 - data_preprocessing - INFO - Preprocessed datasets loaded successfully.
+2026-08-02 17:17:58 - data_preprocessing - INFO - Applying TF-IDF Vectorization with max_features=35...
+2026-08-02 17:17:58 - data_preprocessing - ERROR - Error during feature engineering: np.nan is an invalid document, expected byte or unicode string.
+Traceback (most recent call last):
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\feature_engineering.py", line 105, in feature_engineering
+    X_train = tfidf.fit_transform(train_df["transformed_text"]).toarray()
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 2105, in fit_transform
+    X = super().fit_transform(raw_documents)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1377, in fit_transform
+    vocabulary, X = self._count_vocab(raw_documents, self.fixed_vocabulary_)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1264, in _count_vocab
+    for feature in analyze(doc):
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 99, in _analyze
+    doc = decoder(doc)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 232, in decode
+    raise ValueError(
+ValueError: np.nan is an invalid document, expected byte or unicode string.
+2026-08-02 17:17:58 - data_preprocessing - ERROR - Pipeline failed: np.nan is an invalid document, expected byte or unicode string.
+Traceback (most recent call last):
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\feature_engineering.py", line 159, in main
+    X_train, X_test, tfidf = feature_engineering(
+  File "F:\Youtube\MLOPS\4. Project 1\MLOPS-Complete-ML-Pipeline\src\feature_engineering.py", line 105, in feature_engineering
+    X_train = tfidf.fit_transform(train_df["transformed_text"]).toarray()
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 2105, in fit_transform
+    X = super().fit_transform(raw_documents)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1377, in fit_transform
+    vocabulary, X = self._count_vocab(raw_documents, self.fixed_vocabulary_)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 1264, in _count_vocab
+    for feature in analyze(doc):
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 99, in _analyze
+    doc = decoder(doc)
+  File "C:\Users\DeLL\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\feature_extraction\text.py", line 232, in decode
+    raise ValueError(
+ValueError: np.nan is an invalid document, expected byte or unicode string.
+2026-08-02 17:19:09 - data_preprocessing - INFO - Starting feature engineering pipeline...
+2026-08-02 17:19:09 - data_preprocessing - INFO - Loading parameters from params.yaml...
+2026-08-02 17:19:09 - data_preprocessing - INFO - Parameters loaded successfully.
+2026-08-02 17:19:09 - data_preprocessing - INFO - Loaded max_features=35
+2026-08-02 17:19:10 - data_preprocessing - INFO - Preprocessed datasets loaded successfully.
+2026-08-02 17:19:10 - data_preprocessing - INFO - Applying TF-IDF Vectorization with max_features=35...
+2026-08-02 17:19:10 - data_preprocessing - INFO - TF-IDF feature engineering completed successfully.
+2026-08-02 17:19:10 - data_preprocessing - INFO - Saving transformed feature vectors...
+2026-08-02 17:19:10 - data_preprocessing - INFO - Train vectors saved to data\transformed\train_vectors.csv
+2026-08-02 17:19:10 - data_preprocessing - INFO - Test vectors saved to data\transformed\test_vectors.csv
+2026-08-02 17:19:10 - data_preprocessing - INFO - Feature engineering pipeline completed successfully.
+2026-08-02 17:20:28 - data_preprocessing - INFO - Starting data preprocessing pipeline...
+2026-08-02 17:20:29 - data_preprocessing - INFO - Train and test datasets loaded successfully.
+2026-08-02 17:20:29 - data_preprocessing - INFO - Starting data preprocessing...
+2026-08-02 17:20:29 - data_preprocessing - INFO - Applying Label Encoding...
+2026-08-02 17:20:29 - data_preprocessing - INFO - Label Encoding completed successfully.
+2026-08-02 17:20:29 - data_preprocessing - INFO - Removing duplicate records...
+2026-08-02 17:20:29 - data_preprocessing - INFO - Duplicate removal completed successfully.
+2026-08-02 17:20:29 - data_preprocessing - INFO - Applying text preprocessing...
+2026-08-02 17:25:01 - data_preprocessing - INFO - Text preprocessing completed successfully.
+2026-08-02 17:25:01 - data_preprocessing - INFO - Data preprocessing completed successfully.
+2026-08-02 17:25:01 - data_preprocessing - INFO - Saving preprocessed datasets...
+2026-08-02 17:25:01 - data_preprocessing - INFO - Train data saved to data\Interim\train_preprocessed.csv
+2026-08-02 17:25:01 - data_preprocessing - INFO - Test data saved to data\Interim\test_preprocessed.csv
+2026-08-02 17:25:01 - data_preprocessing - INFO - Data preprocessing pipeline completed successfully.
+2026-08-02 17:25:19 - data_preprocessing - INFO - Starting feature engineering pipeline...
+2026-08-02 17:25:19 - data_preprocessing - INFO - Loading parameters from params.yaml...
+2026-08-02 17:25:19 - data_preprocessing - INFO - Parameters loaded successfully.
+2026-08-02 17:25:19 - data_preprocessing - INFO - Loaded max_features=35
+2026-08-02 17:25:19 - data_preprocessing - INFO - Preprocessed datasets loaded successfully.
+2026-08-02 17:25:19 - data_preprocessing - INFO - Applying TF-IDF Vectorization with max_features=35...
+2026-08-02 17:25:20 - data_preprocessing - INFO - TF-IDF feature engineering completed successfully.
+2026-08-02 17:25:20 - data_preprocessing - INFO - Saving transformed feature vectors...
+2026-08-02 17:25:20 - data_preprocessing - INFO - Train vectors saved to data\transformed\train_vectors.csv
+2026-08-02 17:25:20 - data_preprocessing - INFO - Test vectors saved to data\transformed\test_vectors.csv
+2026-08-02 17:25:20 - data_preprocessing - INFO - Feature engineering pipeline completed successfully.
